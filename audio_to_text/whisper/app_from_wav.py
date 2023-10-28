@@ -11,11 +11,11 @@ os.environ["HF_HOME"] = relative_path
 
 print("Iniciando  lectura fichero de audio ...")
 import soundfile as sf
-audio_path = "salida.wav"
+audio_path = "salida1.wav"
 audio, sampling_rate = sf.read(audio_path, dtype='int16')
 print("Lectura del archivo finalizada")
 
-print(F"{audio.shape}-{audio.dtype}")
+print(F"{audio.shape}-{audio.dtype}-{sampling_rate }")
 
 ##-----------------
 

@@ -8,35 +8,44 @@ os.environ["HF_HOME"] = relative_path
 
 ##-----------------
 
-import moviepy.editor as mp
-import wave
-import numpy as np
+sampling_rate=16000
 
-sampling_rate = 16000
+# import moviepy.editor as mp
 
-# Nombre del archivo MKV de entrada
+# input_file = "entrada.mkv"
+# output_file = "salida.wav"
 
-input_file = "entrada.mkv"
+# clip = mp.VideoFileClip(input_file)
+# audio = clip.audio
+# audio.write_audiofile(output_file, codec='pcm_s16le', verbose=False)
+
+# print("Extracción del audio finalizada")
+
+##-----------------
+
+from pydub import AudioSegment
+
+input_file = "salida1.wav"
 output_file = "salida.wav"
 
-print("Iniciando  lectura y extracción del audio del fichero de video ...")
-clip = mp.VideoFileClip(input_file)
-audio = clip.audio
-audio.write_audiofile(output_file, codec='pcm_s16le', ffmpeg_params=["-ac", "1", "-ar", "16000"])
-print("Lectura del archivo finalizada")
+audio = AudioSegment.from_wav(input_file)
+audio = audio.set_channels(1)
+audio = audio.set_frame_rate(sampling_rate)
+audio.export(output_file, format="wav")
 
+print("Conversión completada")
 
 ##------------------
 
-# carga del fichero de audio
+# print("Iniciando  lectura fichero de audio ...")
 
-print("Iniciando  lectura fichero de audio ...")
-import soundfile as sf
-audio_path = "salida.wav"
-audio, sampling_rate = sf.read(audio_path, dtype='int16')
-print("Lectura del archivo finalizada")
+# import soundfile as sf
+# output_file = "salida.wav"
+# audio, sampling_rate = sf.read(output_file, dtype='int16')
 
-print(F"{audio.shape}-{audio.dtype}")
+# print("Lectura del archivo finalizada")
+
+# print(F"{audio.shape}-{audio.dtype}-{sampling_rate }")
 
 ##-----------------
 
@@ -45,8 +54,11 @@ print(F"{audio.shape}-{audio.dtype}")
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
 import torch
 
-processor = WhisperProcessor.from_pretrained("openai/whisper-large")
-model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+model_name='openai/whisper-large'
+#model_name='openai/whisper-huge'
+
+processor = WhisperProcessor.from_pretrained(model_name)
+model = WhisperForConditionalGeneration.from_pretrained(model_name)
 model.config.forced_decoder_ids = None
 
 ##-----------------

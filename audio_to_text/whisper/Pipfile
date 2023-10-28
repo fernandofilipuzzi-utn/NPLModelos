@@ -9,6 +9,8 @@ torch = "*"
 transformers = "*"
 soundfile = "*"
 moviepy = "*"
+pydub = "*"
+scipy = "*"
 
 [dev-packages]
 
