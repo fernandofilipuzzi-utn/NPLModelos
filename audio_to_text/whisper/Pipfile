@@ -8,6 +8,7 @@ sounddevice = "*"
 torch = "*"
 transformers = "*"
 soundfile = "*"
+moviepy = "*"
 
 [dev-packages]
 
