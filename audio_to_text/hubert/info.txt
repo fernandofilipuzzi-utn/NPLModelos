@@ -1,0 +1,15 @@
+
+pipenv install torch
+pipenv install transformers
+
+
+#desde un microfono
+pipenv install sounddevice
+
+#desde un fichero
+pivpenv install soundfile
+
+pipenv install librosa
+ pipenv install sounddevice
+ pipenv install numpy
+ pipenv install moviepy

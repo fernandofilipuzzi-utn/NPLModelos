@@ -1,0 +1,4 @@
+https://huggingface.co/google/ddpm-cat-256
+
+pipenv install diffusers["torch"] transformers
+

@@ -1,0 +1,5 @@
+
+python -m venv .env
+pipenv shell
+pipenv install diffusers["torch"] transformers
+# pip install diffusers
