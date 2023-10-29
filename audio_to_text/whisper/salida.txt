@@ -1,1 +1,1 @@
- ប្រានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានានាន
+ bien acá te armé un ejemplo con con lo que vos querés hacer pero con otra tarea básicamente que es actualizar un contador y pintar una barra mientras va avanzando que se llama progress bar el progress bar lo podés encontrar acá en el cuadro herramienta acá el componente
