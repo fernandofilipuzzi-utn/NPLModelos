@@ -11,6 +11,8 @@ soundfile = "*"
 moviepy = "*"
 pydub = "*"
 scipy = "*"
+pysoundfile = "*"
+speechrecognition = "*"
 
 [dev-packages]
 

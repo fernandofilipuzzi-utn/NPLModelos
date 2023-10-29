@@ -23,29 +23,29 @@ sampling_rate=16000
 
 ##-----------------
 
-from pydub import AudioSegment
+# from pydub import AudioSegment
 
-input_file = "salida1.wav"
-output_file = "salida.wav"
+# input_file = "salida1.wav"
+# output_file = "salida.wav"
 
-audio = AudioSegment.from_wav(input_file)
-audio = audio.set_channels(1)
-audio = audio.set_frame_rate(sampling_rate)
-audio.export(output_file, format="wav")
+# audio = AudioSegment.from_wav(input_file)
+# audio = audio.set_channels(1)
+# audio = audio.set_frame_rate(sampling_rate)
+# audio.export(output_file, format="wav")
 
-print("Conversión completada")
+# print("Conversión completada")
 
 ##------------------
 
-# print("Iniciando  lectura fichero de audio ...")
+print("Iniciando  lectura fichero de audio ...")
 
-# import soundfile as sf
-# output_file = "salida.wav"
-# audio, sampling_rate = sf.read(output_file, dtype='int16')
+import soundfile as sf
+output_file = "salida.wav"
+audio, sampling_rate = sf.read(output_file, dtype='int16')
 
-# print("Lectura del archivo finalizada")
+print("Lectura del archivo finalizada")
 
-# print(F"{audio.shape}-{audio.dtype}-{sampling_rate }")
+print(F"{audio.shape}-{audio.dtype}-{sampling_rate }")
 
 ##-----------------
 

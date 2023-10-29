@@ -19,3 +19,7 @@ El error zero-size array to reduction operation maximum which has no identity in
 El audio es demasiado corto. El modelo Whisper necesita un mínimo de 1 segundo de audio para generar una transcripción.
 El audio está demasiado silencioso. El modelo Whisper necesita audio con un volumen suficiente para poder procesarlo correctamente.
 El audio está demasiado ruidoso. El modelo Whisper puede tener dificultades para procesar audio con mucho ruido de fondo.
+
+
+https://copyprogramming.com/howto/ffmpeg-extract-audio-from-video-to-wav
+https://www.comet.com/site/blog/working-with-audio-data-for-machine-learning-in-python/
