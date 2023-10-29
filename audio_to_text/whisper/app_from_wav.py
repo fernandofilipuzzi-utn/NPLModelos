@@ -68,7 +68,9 @@ transcription = processor.batch_decode(predicted_ids, skip_special_tokens=True)
 
 print(transcription)
 
+output_file_text='salida.txt'
+
 transcription_text = '\n'.join(transcription)
 
-with open(output_file, 'w', encoding='utf-8') as file:
+with open(output_file_text, 'w', encoding='utf-8') as file:
     file.write(transcription_text)
