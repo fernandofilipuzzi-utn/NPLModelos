@@ -4,4 +4,4 @@ mkdir .venv
 pipenv install
 
 pipenv shell
-pipenv install torch transformers
+pipenv install torch transformers sklearn
