@@ -1,0 +1,3 @@
+https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/inpaint
+
+pipenv install diffusers torch transformers
