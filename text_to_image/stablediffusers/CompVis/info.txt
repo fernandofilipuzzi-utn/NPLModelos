@@ -1,0 +1,5 @@
+
+mkdir .venv
+
+pipenv shell
+pipenv install diffusers torch transformers stablediffusers StableDiffusionPipeline
