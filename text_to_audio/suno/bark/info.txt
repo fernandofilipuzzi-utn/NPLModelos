@@ -1,0 +1,18 @@
+
+# al descargar el fichero - preparando el entorno virtual
+mkdir .venv
+pipenv install
+python app.py
+
+# entrar en el entorno de ejecución
+pipenv shell
+
+# dependencias instaladas
+pipenv install torch transformers soundfile numpy 
+
+# referencias
+https://huggingface.co/suno/bark
+
+# recursos
+disco: 5Gb aproximado
+RAM: 
